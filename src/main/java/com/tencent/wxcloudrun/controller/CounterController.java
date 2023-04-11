@@ -62,7 +62,7 @@ public class CounterController {
     if (request.getAction().equals("inc")) {
       Integer count = 1;
       if (curCounter.isPresent()) {
-        count = curCounter.get().getCount() + 2;
+        count *= curCounter.get().getCount();
       }
       Counter counter = new Counter();
       counter.setId(1);
